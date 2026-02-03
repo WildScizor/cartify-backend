@@ -1,37 +1,55 @@
 import { Router } from 'express';
-import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-import { nanoid } from 'nanoid';
-import { db } from '../db.js';
+import { User } from '../models/index.js';
 import { requireAuth } from '../middleware/auth.js';
+import dotenv from 'dotenv';  
+
+dotenv.config(); 
 
 const router = Router();
 
-router.post('/signup', (req, res) => {
-  const { email, password, name } = req.body || {};
-  if (!email || !password || !name) return res.status(400).json({ message: 'Missing fields' });
-  const normalizedEmail = String(email).toLowerCase();
-  if (db.data.users.some(u => u.email === normalizedEmail)) {
-    return res.status(409).json({ message: 'Email already in use' });
+router.post('/signup', async (req, res) => {
+  try {
+    const { email, password, name } = req.body || {};
+    if (!email || !password || !name) return res.status(400).json({ message: 'Missing fields' });
+    
+    const normalizedEmail = String(email).toLowerCase();
+    
+    // Check if user already exists
+    const existingUser = await User.findOne({ email: normalizedEmail });
+    if (existingUser) {
+      return res.status(409).json({ message: 'Email already in use' });
+    }
+    
+    // Create new user
+    const user = await User.createUser({ email: normalizedEmail, name, password });
+    const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: '7d' });
+    
+    res.json({ token, user: user.publicProfile });
+  } catch (error) {
+    console.error('Signup error:', error);
+    res.status(500).json({ message: 'Internal server error' });
   }
-  const passwordHash = bcrypt.hashSync(password, bcrypt.genSaltSync(10));
-  const user = { id: nanoid(), email: normalizedEmail, name, passwordHash, createdAt: new Date().toISOString() };
-  db.data.users.push(user);
-  db.write();
-  const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET, { expiresIn: '7d' });
-  res.json({ token, user: { id: user.id, email: user.email, name: user.name } });
 });
 
-router.post('/login', (req, res) => {
-  const { email, password } = req.body || {};
-  if (!email || !password) return res.status(400).json({ message: 'Missing fields' });
-  const normalizedEmail = String(email).toLowerCase();
-  const user = db.data.users.find(u => u.email === normalizedEmail);
-  if (!user) return res.status(401).json({ message: 'Invalid credentials' });
-  const ok = bcrypt.compareSync(password, user.passwordHash);
-  if (!ok) return res.status(401).json({ message: 'Invalid credentials' });
-  const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET, { expiresIn: '7d' });
-  res.json({ token, user: { id: user.id, email: user.email, name: user.name } });
+router.post('/login', async (req, res) => {
+  try {
+    const { email, password } = req.body || {};
+    if (!email || !password) return res.status(400).json({ message: 'Missing fields' });
+    
+    const normalizedEmail = String(email).toLowerCase();
+    const user = await User.findOne({ email: normalizedEmail });
+    
+    if (!user || !user.comparePassword(password)) {
+      return res.status(401).json({ message: 'Invalid credentials' });
+    }
+    
+    const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: '7d' });
+    res.json({ token, user: user.publicProfile });
+  } catch (error) {
+    console.error('Login error:', error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
 });
 
 router.get('/me', requireAuth, (req, res) => {

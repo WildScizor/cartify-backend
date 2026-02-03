@@ -1,20 +1,45 @@
-import { Low } from 'lowdb';
-import { JSONFile } from 'lowdb/node';
-import fs from 'node:fs';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import mongoose from 'mongoose';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const dataDir = path.join(__dirname, '..', 'data');
-if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
-const dbFile = path.join(dataDir, 'db.json');
+// MongoDB connection configuration
+const connectDB = async () => {
+  try {
+    const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/cartify';
+    
+    try {
+    const conn = await mongoose.connect(mongoURI);
 
-const defaultData = { users: [], items: [], carts: [] };
-const adapter = new JSONFile(dbFile);
-const db = new Low(adapter, defaultData);
-await db.read();
-if (!db.data) db.data = defaultData;
-await db.write();
+    console.log(`MongoDB Connected: ${conn.connection.host}`);
+    return conn;
+} catch (error) {
+    console.error('MongoDB connection error:', error);
+    process.exit(1);
+}
+    console.log(`MongoDB Connected: ${conn.connection.host}`);
+    return conn;
+  } catch (error) {
+    console.error('MongoDB connection error:', error);
+    process.exit(1);
+  }
+};
 
-export { db };
+// Handle connection events
+mongoose.connection.on('connected', () => {
+  console.log('Mongoose connected to MongoDB');
+});
+
+mongoose.connection.on('error', (err) => {
+  console.error('Mongoose connection error:', err);
+});
+
+mongoose.connection.on('disconnected', () => {
+  console.log('Mongoose disconnected from MongoDB');
+});
+
+// Graceful shutdown
+process.on('SIGINT', async () => {
+  await mongoose.connection.close();
+  console.log('MongoDB connection closed through app termination');
+  process.exit(0);
+});
+
+export { connectDB };
