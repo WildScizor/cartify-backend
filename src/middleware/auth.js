@@ -17,7 +17,11 @@ export function requireAuth(req, res, next) {
     User.findById(payload.userId)
       .then(user => {
         if (!user) return res.status(401).json({ message: 'Invalid token' });
-        req.user = user.publicProfile;
+        req.user = {
+          id: user._id,
+          name: user.name,    
+          email: user.email
+        };
         next();
       })
       .catch(() => res.status(401).json({ message: 'Unauthorized' }));
@@ -25,3 +29,5 @@ export function requireAuth(req, res, next) {
     return res.status(401).json({ message: 'Unauthorized' });
   }
 }
+
+export default requireAuth;

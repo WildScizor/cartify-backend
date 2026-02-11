@@ -1,0 +1,645 @@
+{
+  "Noise-Cancelling Headphones": {
+    "en": {
+      "title": "Noise-Cancelling Headphones",
+      "description": "Over-ear headphones with active noise cancellation and immersive sound quality."
+    },
+    "hi": {
+      "title": "शोर रद्द करने वाले हेडफ़ोन",
+      "description": "सक्रिय शोर रद्दीकरण और शानदार साउंड क्वालिटी वाले ओवर-ईयर हेडफ़ोन।"
+    },
+    "fr": {
+      "title": "Casque à réduction de bruit",
+      "description": "Casque circum-aural avec réduction active du bruit et son immersif."
+    },
+    "es": {
+      "title": "Auriculares con cancelación de ruido",
+      "description": "Auriculares circumaurales con cancelación activa de ruido y sonido envolvente."
+    },
+    "de": {
+      "title": "Kopfhörer mit Geräuschunterdrückung",
+      "description": "Over-Ear-Kopfhörer mit aktiver Geräuschunterdrückung und beeindruckendem Klang."
+    },
+    "it": {
+      "title": "Cuffie a cancellazione del rumore",
+      "description": "Cuffie over-ear con cancellazione attiva del rumore e audio immersivo."
+    },
+    "pt": {
+      "title": "Fones de ouvido com cancelamento de ruído",
+      "description": "Fones over-ear com cancelamento ativo de ruído e som envolvente."
+    },
+    "ru": {
+      "title": "Наушники с шумоподавлением",
+      "description": "Полноразмерные наушники с активным шумоподавлением и насыщенным звуком."
+    },
+    "ja": {
+      "title": "ノイズキャンセリングヘッドフォン",
+      "description": "アクティブノイズキャンセリング搭載の没入感あるオーバーイヤーヘッドフォン。"
+    },
+    "zh": {
+      "title": "降噪耳机",
+      "description": "具备主动降噪功能的头戴式耳机，带来沉浸式音效体验。"
+    }
+  },
+
+  "Smart Watch Series X": {
+    "en": {
+      "title": "Smart Watch Series X",
+      "description": "Advanced smartwatch with health tracking, GPS, and water resistance."
+    },
+    "hi": {
+      "title": "स्मार्ट वॉच सीरीज X",
+      "description": "स्वास्थ्य ट्रैकिंग, GPS और वाटर रेजिस्टेंस के साथ उन्नत स्मार्टवॉच।"
+    },
+    "fr": {
+      "title": "Montre intelligente Série X",
+      "description": "Montre connectée avancée avec suivi de la santé, GPS et résistance à l’eau."
+    },
+    "es": {
+      "title": "Reloj inteligente Serie X",
+      "description": "Reloj inteligente avanzado con seguimiento de salud, GPS y resistencia al agua."
+    },
+    "de": {
+      "title": "Smartwatch Serie X",
+      "description": "Fortschrittliche Smartwatch mit Gesundheitsüberwachung, GPS und Wasserschutz."
+    },
+    "it": {
+      "title": "Smart Watch Serie X",
+      "description": "Smartwatch avanzato con monitoraggio della salute, GPS e resistenza all’acqua."
+    },
+    "pt": {
+      "title": "Relógio inteligente Série X",
+      "description": "Smartwatch avançado com monitoramento de saúde, GPS e resistência à água."
+    },
+    "ru": {
+      "title": "Смарт-часы Серия X",
+      "description": "Продвинутые смарт-часы с отслеживанием здоровья, GPS и водозащитой."
+    },
+    "ja": {
+      "title": "スマートウォッチ シリーズX",
+      "description": "健康管理、GPS、防水機能を備えた高性能スマートウォッチ。"
+    },
+    "zh": {
+      "title": "智能手表 X 系列",
+      "description": "具备健康监测、GPS 和防水功能的高级智能手表。"
+    }
+  },
+
+  "Espresso Machine Pro": {
+    "en": {
+      "title": "Espresso Machine Pro",
+      "description": "Professional espresso machine with precise temperature and pressure control."
+    },
+    "hi": {
+      "title": "एस्प्रेसो मशीन प्रो",
+      "description": "सटीक तापमान और प्रेशर नियंत्रण के साथ प्रोफेशनल एस्प्रेसो मशीन।"
+    },
+    "fr": {
+      "title": "Machine à expresso Pro",
+      "description": "Machine à expresso professionnelle avec contrôle précis de la température et de la pression."
+    },
+    "es": {
+      "title": "Cafetera espresso Pro",
+      "description": "Cafetera profesional con control preciso de temperatura y presión."
+    },
+    "de": {
+      "title": "Espressomaschine Pro",
+      "description": "Professionelle Espressomaschine mit präziser Temperatur- und Druckregelung."
+    },
+    "it": {
+      "title": "Macchina per espresso Pro",
+      "description": "Macchina professionale con controllo preciso di temperatura e pressione."
+    },
+    "pt": {
+      "title": "Máquina de Espresso Pro",
+      "description": "Máquina profissional com controle preciso de temperatura e pressão."
+    },
+    "ru": {
+      "title": "Эспрессо-машина Про",
+      "description": "Профессиональная эспрессо-машина с точным контролем температуры и давления."
+    },
+    "ja": {
+      "title": "エスプレッソマシン プロ",
+      "description": "温度と圧力を正確に制御できるプロ仕様のエスプレッソマシン。"
+    },
+    "zh": {
+      "title": "专业浓缩咖啡机",
+      "description": "具备精准温度和压力控制的专业级浓缩咖啡机。"
+    }
+  },
+
+  "Lightweight Running Shoes": {
+    "en": {
+      "title": "Lightweight Running Shoes",
+      "description": "Breathable running shoes designed for comfort, speed, and long-distance runs."
+    },
+    "hi": {
+      "title": "हल्के रनिंग शूज़",
+      "description": "आराम, गति और लंबी दूरी के लिए डिज़ाइन किए गए हल्के और सांस लेने योग्य जूते।"
+    },
+    "fr": {
+      "title": "Chaussures de course légères",
+      "description": "Chaussures respirantes conçues pour le confort, la vitesse et les longues distances."
+    },
+    "es": {
+      "title": "Zapatillas de correr ligeras",
+      "description": "Zapatillas transpirables diseñadas para comodidad, velocidad y largas distancias."
+    },
+    "de": {
+      "title": "Leichte Laufschuhe",
+      "description": "Atmungsaktive Laufschuhe für Komfort, Geschwindigkeit und lange Strecken."
+    },
+    "it": {
+      "title": "Scarpe da corsa leggere",
+      "description": "Scarpe traspiranti progettate per comfort, velocità e lunghe distanze."
+    },
+    "pt": {
+      "title": "Tênis de corrida leves",
+      "description": "Tênis respiráveis projetados para conforto, velocidade e longas distâncias."
+    },
+    "ru": {
+      "title": "Легкие кроссовки для бега",
+      "description": "Дышащие кроссовки для комфорта, скорости и длительных пробежек."
+    },
+    "ja": {
+      "title": "軽量ランニングシューズ",
+      "description": "快適さ、スピード、長距離走行のために設計された通気性の高いシューズ。"
+    },
+    "zh": {
+      "title": "轻便跑鞋",
+      "description": "为舒适性、速度和长距离跑步设计的透气跑鞋。"
+    }
+  },
+
+  "Eco Yoga Mat": {
+    "en": {
+      "title": "Eco Yoga Mat",
+      "description": "Eco-friendly yoga mat made from non-toxic and biodegradable materials."
+    },
+    "hi": {
+      "title": "इको योगा मैट",
+      "description": "गैर-विषैले और बायोडिग्रेडेबल सामग्री से बनी पर्यावरण अनुकूल योगा मैट।"
+    },
+    "fr": {
+      "title": "Tapis de yoga écologique",
+      "description": "Tapis de yoga écologique fabriqué à partir de matériaux non toxiques et biodégradables."
+    },
+    "es": {
+      "title": "Esterilla de yoga ecológica",
+      "description": "Esterilla ecológica fabricada con materiales no tóxicos y biodegradables."
+    },
+    "de": {
+      "title": "Öko-Yogamatte",
+      "description": "Umweltfreundliche Yogamatte aus ungiftigen und biologisch abbaubaren Materialien."
+    },
+    "it": {
+      "title": "Tappetino da yoga ecologico",
+      "description": "Tappetino ecologico realizzato con materiali atossici e biodegradabili."
+    },
+    "pt": {
+      "title": "Tapete de ioga ecológico",
+      "description": "Tapete ecológico feito de materiais não tóxicos e biodegradáveis."
+    },
+    "ru": {
+      "title": "Эко-коврик для йоги",
+      "description": "Экологичный коврик для йоги из нетоксичных и биоразлагаемых материалов."
+    },
+    "ja": {
+      "title": "エコヨガマット",
+      "description": "無毒で生分解性素材を使用した環境に優しいヨガマット。"
+    },
+    "zh": {
+      "title": "环保瑜伽垫",
+      "description": "采用无毒、可生物降解材料制成的环保瑜伽垫。"
+    }
+  },
+
+  "Mechanical Gaming Keyboard": {
+    "en": {
+      "title": "Mechanical Gaming Keyboard",
+      "description": "High-performance mechanical keyboard with tactile switches and customizable RGB lighting."
+    },
+    "hi": {
+      "title": "मैकेनिकल गेमिंग कीबोर्ड",
+      "description": "टैक्टाइल स्विच और कस्टमाइज़ेबल RGB लाइटिंग वाला हाई-परफॉर्मेंस कीबोर्ड।"
+    },
+    "fr": {
+      "title": "Clavier de jeu mécanique",
+      "description": "Clavier mécanique haute performance avec switches tactiles et éclairage RGB personnalisable."
+    },
+    "es": {
+      "title": "Teclado mecánico para juegos",
+      "description": "Teclado mecánico de alto rendimiento con interruptores táctiles e iluminación RGB personalizable."
+    },
+    "de": {
+      "title": "Mechanische Gaming-Tastatur",
+      "description": "Leistungsstarke mechanische Tastatur mit taktilen Schaltern und anpassbarer RGB-Beleuchtung."
+    },
+    "it": {
+      "title": "Tastiera da gioco meccanica",
+      "description": "Tastiera meccanica ad alte prestazioni con switch tattili e illuminazione RGB personalizzabile."
+    },
+    "pt": {
+      "title": "Teclado mecânico para jogos",
+      "description": "Teclado mecânico de alto desempenho com switches táteis e iluminação RGB personalizável."
+    },
+    "ru": {
+      "title": "Механическая игровая клавиатура",
+      "description": "Высокопроизводительная механическая клавиатура с тактильными переключателями и RGB-подсветкой."
+    },
+    "ja": {
+      "title": "メカニカルゲーミングキーボード",
+      "description": "タクタイルスイッチとカスタマイズ可能なRGBライティングを備えた高性能キーボード。"
+    },
+    "zh": {
+      "title": "机械游戏键盘",
+      "description": "配备触感轴体和可定制RGB灯效的高性能机械键盘。"
+    }
+  },
+
+  "27\" 4K IPS Monitor": {
+    "en": {
+      "title": "27\" 4K IPS Monitor",
+      "description": "27-inch 4K IPS monitor offering ultra-sharp visuals, wide color accuracy, and slim bezels."
+    },
+    "hi": {
+      "title": "27\" 4K IPS मॉनिटर",
+      "description": "अल्ट्रा-शार्प विज़ुअल्स, वाइड कलर एक्यूरेसी और स्लिम बेज़ेल्स वाला 27-इंच मॉनिटर।"
+    },
+    "fr": {
+      "title": "Moniteur IPS 27\" 4K",
+      "description": "Moniteur IPS 4K de 27 pouces offrant des images ultra-nettes et une grande précision des couleurs."
+    },
+    "es": {
+      "title": "Monitor IPS 4K de 27\"",
+      "description": "Monitor IPS 4K de 27 pulgadas con imágenes ultra nítidas y alta precisión de color."
+    },
+    "de": {
+      "title": "27\" 4K IPS-Monitor",
+      "description": "27-Zoll-4K-IPS-Monitor mit ultrascharfer Darstellung und hoher Farbgenauigkeit."
+    },
+    "it": {
+      "title": "Monitor IPS 4K da 27\"",
+      "description": "Monitor IPS 4K da 27 pollici con immagini ultra nitide e colori accurati."
+    },
+    "pt": {
+      "title": "Monitor IPS 4K de 27\"",
+      "description": "Monitor IPS 4K de 27 polegadas com imagens ultranítidas e alta precisão de cores."
+    },
+    "ru": {
+      "title": "27-дюймовый IPS-монитор 4K",
+      "description": "27-дюймовый IPS-монитор 4K с ультрачетким изображением и высокой цветопередачей."
+    },
+    "ja": {
+      "title": "27インチ 4K IPS モニター",
+      "description": "超高精細な映像と高い色精度を実現する27インチ4K IPSモニター。"
+    },
+    "zh": {
+      "title": "27英寸 4K IPS 显示器",
+      "description": "提供超清晰画面、高色彩准确度和窄边框设计的27英寸4K IPS显示器。"
+    }
+  },
+
+  "Ergonomic Office Chair": {
+    "en": {
+      "title": "Ergonomic Office Chair",
+      "description": "Comfortable ergonomic chair with lumbar support, adjustable height, and breathable mesh."
+    },
+    "hi": {
+      "title": "एर्गोनोमिक ऑफिस चेयर",
+      "description": "लम्बर सपोर्ट, एडजस्टेबल हाइट और सांस लेने योग्य मेश के साथ आरामदायक कुर्सी।"
+    },
+    "fr": {
+      "title": "Chaise de bureau ergonomique",
+      "description": "Chaise ergonomique confortable avec support lombaire et hauteur réglable."
+    },
+    "es": {
+      "title": "Silla de oficina ergonómica",
+      "description": "Silla ergonómica cómoda con soporte lumbar, altura ajustable y malla transpirable."
+    },
+    "de": {
+      "title": "Ergonomischer Bürostuhl",
+      "description": "Bequemer ergonomischer Stuhl mit Lendenstütze und verstellbarer Höhe."
+    },
+    "it": {
+      "title": "Sedia da ufficio ergonomica",
+      "description": "Sedia ergonomica confortevole con supporto lombare e altezza regolabile."
+    },
+    "pt": {
+      "title": "Cadeira de escritório ergonômica",
+      "description": "Cadeira ergonômica confortável com suporte lombar e altura ajustável."
+    },
+    "ru": {
+      "title": "Эргономичное офисное кресло",
+      "description": "Удобное эргономичное кресло с поясничной поддержкой и регулируемой высотой."
+    },
+    "ja": {
+      "title": "エルゴノミックオフィスチェア",
+      "description": "ランバーサポートと高さ調節機能を備えた快適なオフィスチェア。"
+    },
+    "zh": {
+      "title": "人体工学办公椅",
+      "description": "配备腰部支撑、可调高度和透气网面的舒适办公椅。"
+    }
+  },
+  
+  "Urban Daypack 25L": {
+    "en": {
+      "title": "Urban Daypack 25L",
+      "description": "Durable 25-liter urban backpack designed for daily commutes and short trips."
+    },
+    "hi": {
+      "title": "अर्बन डेपैक 25L",
+      "description": "दैनिक आवागमन और छोटे सफ़रों के लिए डिज़ाइन किया गया मजबूत 25 लीटर बैकपैक।"
+    },
+    "fr": {
+      "title": "Sac à dos urbain 25L",
+      "description": "Sac à dos urbain de 25 litres conçu pour les trajets quotidiens et les courts voyages."
+    },
+    "es": {
+      "title": "Mochila urbana de 25 litros",
+      "description": "Mochila urbana resistente de 25 litros para desplazamientos diarios y viajes cortos."
+    },
+    "de": {
+      "title": "Urbaner Tagesrucksack 25L",
+      "description": "Robuster 25-Liter-Rucksack für den täglichen Arbeitsweg und kurze Reisen."
+    },
+    "it": {
+      "title": "Zaino urbano da 25 litri",
+      "description": "Zaino urbano resistente da 25 litri per pendolarismo quotidiano e viaggi brevi."
+    },
+    "pt": {
+      "title": "Mochila urbana de 25L",
+      "description": "Mochila urbana resistente de 25 litros para deslocamentos diários e viagens curtas."
+    },
+    "ru": {
+      "title": "Городской рюкзак 25л",
+      "description": "Прочный городской рюкзак объемом 25 литров для ежедневных поездок и коротких путешествий."
+    },
+    "ja": {
+      "title": "アーバンデイパック 25L",
+      "description": "通勤や短期旅行に適した耐久性の高い25リットルのバックパック。"
+    },
+    "zh": {
+      "title": "城市日用背包 25L",
+      "description": "适合日常通勤和短途出行的耐用型25升城市背包。"
+    }
+  },
+
+  "Stainless Steel Cookware (10pc)": {
+    "en": {
+      "title": "Stainless Steel Cookware (10pc)",
+      "description": "Premium 10-piece stainless steel cookware set for everyday cooking."
+    },
+    "hi": {
+      "title": "स्टेनलेस स्टील कुकवेयर (10pc)",
+      "description": "दैनिक खाना पकाने के लिए प्रीमियम 10-पीस स्टेनलेस स्टील कुकवेयर सेट।"
+    },
+    "fr": {
+      "title": "Batterie de cuisine en acier inoxydable (10 pièces)",
+      "description": "Batterie de cuisine haut de gamme de 10 pièces en acier inoxydable."
+    },
+    "es": {
+      "title": "Batería de cocina de acero inoxidable (10 piezas)",
+      "description": "Juego premium de cocina de acero inoxidable de 10 piezas para uso diario."
+    },
+    "de": {
+      "title": "Kochgeschirr aus Edelstahl (10-teilig)",
+      "description": "Hochwertiges 10-teiliges Edelstahl-Kochgeschirr für den täglichen Gebrauch."
+    },
+    "it": {
+      "title": "Pentole in acciaio inossidabile (10 pezzi)",
+      "description": "Set premium da 10 pezzi in acciaio inossidabile per la cucina quotidiana."
+    },
+    "pt": {
+      "title": "Conjunto de panelas de aço inoxidável (10 peças)",
+      "description": "Conjunto premium de 10 peças em aço inoxidável para uso diário."
+    },
+    "ru": {
+      "title": "Посуда из нержавеющей стали (10 предметов)",
+      "description": "Премиальный набор из 10 предметов из нержавеющей стали для ежедневной готовки."
+    },
+    "ja": {
+      "title": "ステンレス製調理器具（10点セット）",
+      "description": "毎日の調理に適した高品質なステンレス製10点セット。"
+    },
+    "zh": {
+      "title": "不锈钢厨具 (10件套)",
+      "description": "适合日常烹饪的高品质不锈钢10件套厨具。"
+    }
+  },
+
+  "Portable Bluetooth Speaker": {
+    "en": {
+      "title": "Portable Bluetooth Speaker",
+      "description": "Compact portable speaker delivering powerful sound with wireless Bluetooth connectivity."
+    },
+    "hi": {
+      "title": "पोर्टेबल ब्लूटूथ स्पीकर",
+      "description": "वायरलेस ब्लूटूथ कनेक्टिविटी के साथ शक्तिशाली साउंड देने वाला कॉम्पैक्ट स्पीकर।"
+    },
+    "fr": {
+      "title": "Enceinte Bluetooth portable",
+      "description": "Enceinte compacte offrant un son puissant avec connectivité Bluetooth sans fil."
+    },
+    "es": {
+      "title": "Altavoz Bluetooth portátil",
+      "description": "Altavoz compacto con sonido potente y conectividad Bluetooth inalámbrica."
+    },
+    "de": {
+      "title": "Tragbarer Bluetooth-Lautsprecher",
+      "description": "Kompakter Lautsprecher mit kraftvollem Klang und kabelloser Bluetooth-Verbindung."
+    },
+    "it": {
+      "title": "Altoparlante Bluetooth portatile",
+      "description": "Altoparlante compatto con suono potente e connettività Bluetooth wireless."
+    },
+    "pt": {
+      "title": "Alto-falante Bluetooth portátil",
+      "description": "Alto-falante compacto com som potente e conectividade Bluetooth sem fio."
+    },
+    "ru": {
+      "title": "Портативная Bluetooth-колонка",
+      "description": "Компактная колонка с мощным звуком и беспроводным Bluetooth-соединением."
+    },
+    "ja": {
+      "title": "ポータブルBluetoothスピーカー",
+      "description": "ワイヤレスBluetooth接続に対応したパワフルなサウンドのコンパクトスピーカー。"
+    },
+    "zh": {
+      "title": "便携式蓝牙音箱",
+      "description": "具备无线蓝牙连接和强劲音效的便携式音箱。"
+    }
+  },
+
+  "Fitness Band": {
+    "en": {
+      "title": "Fitness Band",
+      "description": "Lightweight fitness band for tracking daily activity, heart rate, and sleep patterns."
+    },
+    "hi": {
+      "title": "फिटनेस बैंड",
+      "description": "दैनिक गतिविधि, हृदय गति और नींद ट्रैक करने के लिए हल्का फिटनेस बैंड।"
+    },
+    "fr": {
+      "title": "Bracelet connecté",
+      "description": "Bracelet léger pour le suivi de l’activité quotidienne, du rythme cardiaque et du sommeil."
+    },
+    "es": {
+      "title": "Pulsera de actividad",
+      "description": "Pulsera ligera para el seguimiento de actividad diaria, ritmo cardíaco y sueño."
+    },
+    "de": {
+      "title": "Fitnessarmband",
+      "description": "Leichtes Fitnessarmband zur Überwachung von Aktivität, Herzfrequenz und Schlaf."
+    },
+    "it": {
+      "title": "Fitness band",
+      "description": "Braccialetto leggero per monitorare attività, battito cardiaco e sonno."
+    },
+    "pt": {
+      "title": "Pulseira fitness",
+      "description": "Pulseira leve para monitorar atividades diárias, frequência cardíaca e sono."
+    },
+    "ru": {
+      "title": "Фитнес-браслет",
+      "description": "Легкий фитнес-браслет для отслеживания активности, пульса и сна."
+    },
+    "ja": {
+      "title": "フィットネスバンド",
+      "description": "日常の活動量、心拍数、睡眠を記録できる軽量フィットネスバンド。"
+    },
+    "zh": {
+      "title": "健身手环",
+      "description": "用于追踪日常活动、心率和睡眠的轻便健身手环。"
+    }
+  },
+  "Smartphone 128GB": {
+    "en": {
+      "title": "Smartphone 128GB",
+      "description": "High-performance smartphone with 128GB storage, powerful processor, and advanced camera system."
+    },
+    "hi": {
+      "title": "स्मार्टफोन 128GB",
+      "description": "128GB स्टोरेज, शक्तिशाली प्रोसेसर और उन्नत कैमरा सिस्टम वाला स्मार्टफोन।"
+    },
+    "fr": {
+      "title": "Smartphone 128 Go",
+      "description": "Smartphone haute performance avec 128 Go de stockage et un système de caméra avancé."
+    },
+    "es": {
+      "title": "Teléfono inteligente de 128 GB",
+      "description": "Smartphone de alto rendimiento con 128 GB de almacenamiento y cámara avanzada."
+    },
+    "de": {
+      "title": "Smartphone 128GB",
+      "description": "Leistungsstarkes Smartphone mit 128 GB Speicher und fortschrittlichem Kamerasystem."
+    },
+    "it": {
+      "title": "Smartphone da 128 GB",
+      "description": "Smartphone ad alte prestazioni con 128 GB di memoria e fotocamera avanzata."
+    },
+    "pt": {
+      "title": "Smartphone de 128 GB",
+      "description": "Smartphone de alto desempenho com 128 GB de armazenamento e câmera avançada."
+    },
+    "ru": {
+      "title": "Смартфон 128 ГБ",
+      "description": "Высокопроизводительный смартфон с 128 ГБ памяти и продвинутой камерой."
+    },
+    "ja": {
+      "title": "スマートフォン 128GB",
+      "description": "128GBストレージと高性能カメラを搭載した高性能スマートフォン。"
+    },
+    "zh": {
+      "title": "智能手机 128GB",
+      "description": "配备128GB存储空间、高性能处理器和先进摄像系统的智能手机。"
+    }
+  },
+
+  "Ultrabook Laptop 14\"": {
+    "en": {
+      "title": "Ultrabook Laptop 14\"",
+      "description": "Slim and lightweight 14-inch ultrabook designed for productivity and portability."
+    },
+    "hi": {
+      "title": "अल्ट्राबुक लैपटॉप 14\"",
+      "description": "उत्पादकता और पोर्टेबिलिटी के लिए डिज़ाइन किया गया पतला और हल्का 14-इंच अल्ट्राबुक।"
+    },
+    "fr": {
+      "title": "Ordinateur portable Ultrabook 14\"",
+      "description": "Ultrabook fin et léger de 14 pouces conçu pour la productivité et la mobilité."
+    },
+    "es": {
+      "title": "Portátil Ultrabook de 14\"",
+      "description": "Ultrabook delgado y ligero de 14 pulgadas diseñado para productividad y portabilidad."
+    },
+    "de": {
+      "title": "Ultrabook-Laptop 14\"",
+      "description": "Schlankes und leichtes 14-Zoll-Ultrabook für Produktivität und Mobilität."
+    },
+    "it": {
+      "title": "Laptop Ultrabook da 14\"",
+      "description": "Ultrabook sottile e leggero da 14 pollici per produttività e portabilità."
+    },
+    "pt": {
+      "title": "Laptop Ultrabook de 14\"",
+      "description": "Ultrabook fino e leve de 14 polegadas projetado para produtividade e mobilidade."
+    },
+    "ru": {
+      "title": "Ноутбук Ультрабук 14\"",
+      "description": "Тонкий и легкий 14-дюймовый ультрабук для работы и мобильности."
+    },
+    "ja": {
+      "title": "14インチ ウルトラブック ラップトップ",
+      "description": "生産性と携帯性を重視した薄型・軽量14インチウルトラブック。"
+    },
+    "zh": {
+      "title": "14英寸超极本笔记本",
+      "description": "为高效办公和便携性设计的轻薄型14英寸超极本。"
+    }
+  },
+
+  "DSLR Camera Kit": {
+    "en": {
+      "title": "DSLR Camera Kit",
+      "description": "Complete DSLR camera kit with interchangeable lenses for professional photography."
+    },
+    "hi": {
+      "title": "DSLR कैमरा किट",
+      "description": "पेशेवर फोटोग्राफी के लिए इंटरचेंजेबल लेंस के साथ पूर्ण DSLR कैमरा किट।"
+    },
+    "fr": {
+      "title": "Kit appareil photo reflex numérique",
+      "description": "Kit reflex complet avec objectifs interchangeables pour la photographie professionnelle."
+    },
+    "es": {
+      "title": "Kit de cámara réflex digital",
+      "description": "Kit completo de cámara réflex con lentes intercambiables para fotografía profesional."
+    },
+    "de": {
+      "title": "DSLR-Kamera-Set",
+      "description": "Komplettes DSLR-Kameraset mit Wechselobjektiven für professionelle Fotografie."
+    },
+    "it": {
+      "title": "Kit fotocamera reflex digitale",
+      "description": "Kit reflex completo con obiettivi intercambiabili per fotografia professionale."
+    },
+    "pt": {
+      "title": "Kit de câmera DSLR",
+      "description": "Kit DSLR completo com lentes intercambiáveis para fotografia profissional."
+    },
+    "ru": {
+      "title": "Комплект зеркальной камеры",
+      "description": "Полный комплект DSLR с сменными объективами для профессиональной съемки."
+    },
+    "ja": {
+      "title": "デジタル一眼レフカメラキット",
+      "description": "プロフェッショナルな撮影に対応した交換レンズ付き一眼レフカメラキット。"
+    },
+    "zh": {
+      "title": "单反相机套装",
+      "description": "适用于专业摄影的可更换镜头单反相机完整套装。"
+    }
+  }
+}

@@ -2,14 +2,12 @@ import mongoose from 'mongoose';
 
 const itemSchema = new mongoose.Schema({
   title: {
-    type: String,
-    required: true,
-    trim: true
+    en: { type: String, required: true, trim: true },
+    hi: { type: String, required: true, trim: true }
   },
   description: {
-    type: String,
-    default: '',
-    trim: true
+    en: { type: String, default: '', trim: true },
+    hi: { type: String, default: '', trim: true }
   },
   price: {
     type: Number,
@@ -30,12 +28,11 @@ const itemSchema = new mongoose.Schema({
   timestamps: true
 });
 
-// Index for search functionality
-itemSchema.index({ title: 'text', description: 'text' });
+// Updated indexes for the new object structure
+itemSchema.index({ 'title.en': 'text', 'title.hi': 'text', 'description.en': 'text', 'description.hi': 'text' });
 itemSchema.index({ category: 1 });
 itemSchema.index({ price: 1 });
 
 const Item = mongoose.model('Item', itemSchema);
 
 export default Item;
-

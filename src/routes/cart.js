@@ -1,96 +1,137 @@
 import { Router } from 'express';
-import { Cart, Item } from '../models/index.js';
-import { requireAuth } from '../middleware/auth.js';
 import mongoose from 'mongoose';
+import { Cart } from '../models/index.js';
+import { requireAuth } from '../middleware/auth.js';
 
 const router = Router();
 
+/**
+ * GET /api/cart
+ */
 router.get('/', requireAuth, async (req, res) => {
   try {
-    const cart = await Cart.getOrCreateCart(req.user.id);
-    
-    // Calculate total with populated items
-    const detailedItems = cart.items.map(cartItem => ({
-      itemId: cartItem.itemId._id,
-      quantity: cartItem.quantity,
-      product: cartItem.itemId
+    const userId = new mongoose.Types.ObjectId(req.user.id);
+
+    const cart = await Cart.findOne({ userId }).populate('items.itemId');
+
+    if (!cart) {
+      return res.json({ items: [], total: 0 });
+    }
+
+    const items = cart.items.map(ci => ({
+      quantity: ci.quantity,
+      product: {
+        ...ci.itemId.toObject(),
+        id: ci.itemId._id.toString(),
+      },
     }));
-    
-    const total = detailedItems.reduce((acc, item) => acc + item.product.price * item.quantity, 0);
-    
-    res.json({ items: detailedItems, total });
-  } catch (error) {
-    console.error('Cart fetch error:', error);
+
+    const total = items.reduce(
+      (sum, it) => sum + it.product.price * it.quantity,
+      0
+    );
+
+    res.json({ items, total });
+  } catch (err) {
+    console.error('GET CART ERROR:', err);
     res.status(500).json({ message: 'Internal server error' });
   }
 });
 
+/**
+ * POST /api/cart/add
+ */
 router.post('/add', requireAuth, async (req, res) => {
   try {
-    const { itemId, quantity = 1 } = req.body || {};
-    if (!itemId) return res.status(400).json({ message: 'Missing itemId' });
-    
-    // Validate itemId and check if item exists
-    if (!mongoose.Types.ObjectId.isValid(itemId)) {
-      return res.status(400).json({ message: 'Invalid itemId' });
-    }
-    
-    const item = await Item.findById(itemId);
-    if (!item) return res.status(400).json({ message: 'Invalid itemId' });
+    const { itemId, quantity = 1 } = req.body;
+    const userId = new mongoose.Types.ObjectId(req.user.id);
 
-    const cart = await Cart.getOrCreateCart(req.user.id);
-    await cart.addItem(itemId, Number(quantity) || 1);
-    
-    res.json({ ok: true });
-  } catch (error) {
-    console.error('Cart add error:', error);
-    res.status(500).json({ message: 'Internal server error' });
+    let cart = await Cart.findOne({ userId });
+
+    if (!cart) {
+      cart = new Cart({ userId, items: [{ itemId, quantity }] });
+    } else {
+      const existing = cart.items.find(
+        i => i.itemId.toString() === itemId
+      );
+
+      if (existing) existing.quantity += quantity;
+      else cart.items.push({ itemId, quantity });
+    }
+
+    await cart.save();
+    res.json({ success: true });
+  } catch (err) {
+    console.error('ADD CART ERROR:', err);
+    res.status(500).json({ message: 'Failed to add item' });
   }
 });
 
+/**
+ * POST /api/cart/update
+ */
 router.post('/update', requireAuth, async (req, res) => {
   try {
-    const { itemId, quantity } = req.body || {};
-    if (!itemId || typeof quantity !== 'number') return res.status(400).json({ message: 'Missing fields' });
-    
-    if (!mongoose.Types.ObjectId.isValid(itemId)) {
-      return res.status(400).json({ message: 'Invalid itemId' });
+    const { itemId, quantity } = req.body;
+    const userId = new mongoose.Types.ObjectId(req.user.id);
+
+    const cart = await Cart.findOne({ userId });
+    if (!cart) return res.status(404).json({ message: 'Cart not found' });
+
+    const item = cart.items.find(
+      i => i.itemId.toString() === itemId
+    );
+
+    if (!item) return res.status(404).json({ message: 'Item not found' });
+
+    if (quantity <= 0) {
+      cart.items = cart.items.filter(
+        i => i.itemId.toString() !== itemId
+      );
+    } else {
+      item.quantity = quantity;
     }
-    
-    const cart = await Cart.getOrCreateCart(req.user.id);
-    
-    try {
-      await cart.updateItemQuantity(itemId, quantity);
-      res.json({ ok: true });
-    } catch (error) {
-      if (error.message === 'Item not found in cart') {
-        return res.status(404).json({ message: 'Item not in cart' });
-      }
-      throw error;
-    }
-  } catch (error) {
-    console.error('Cart update error:', error);
-    res.status(500).json({ message: 'Internal server error' });
+
+    await cart.save();
+    res.json({ success: true });
+  } catch (err) {
+    console.error('UPDATE CART ERROR:', err);
+    res.status(500).json({ message: 'Failed to update item' });
   }
 });
 
+/**
+ * POST /api/cart/remove
+ */
 router.post('/remove', requireAuth, async (req, res) => {
   try {
-    const { itemId } = req.body || {};
-    if (!itemId) return res.status(400).json({ message: 'Missing itemId' });
-    
-    if (!mongoose.Types.ObjectId.isValid(itemId)) {
-      return res.status(400).json({ message: 'Invalid itemId' });
-    }
-    
-    const cart = await Cart.getOrCreateCart(req.user.id);
-    await cart.removeItem(itemId);
-    
-    res.json({ ok: true });
-  } catch (error) {
-    console.error('Cart remove error:', error);
-    res.status(500).json({ message: 'Internal server error' });
+    const { itemId } = req.body;
+    const userId = new mongoose.Types.ObjectId(req.user.id);
+
+    const cart = await Cart.findOne({ userId });
+    if (!cart) return res.status(404).json({ message: 'Cart not found' });
+
+    cart.items = cart.items.filter(
+      i => i.itemId.toString() !== itemId
+    );
+
+    await cart.save();
+    res.json({ success: true });
+  } catch (err) {
+    console.error('REMOVE CART ERROR:', err);
+    res.status(500).json({ message: 'Failed to remove item' });
   }
 });
+
+// POST /api/cart/clear
+router.post('/clear', requireAuth, async (req, res) => {
+  try {
+    await Cart.findOneAndDelete({ userId: req.user.id });
+    res.json({ message: 'Cart cleared' });
+  } catch (err) {
+    res.status(500).json({ message: 'Failed to clear cart' });
+  }
+});
+
 
 export default router;
