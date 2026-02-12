@@ -31,8 +31,27 @@ userSchema.pre('save', async function (next) {
   next();
 });
 
+userSchema.statics.createUser = async function ({ email, name, password }) {
+  return this.create({
+    email,
+    name,
+    passwordHash: password,
+  });
+};
+
 userSchema.methods.comparePassword = function (candidatePassword) {
   return bcrypt.compareSync(candidatePassword, this.passwordHash);
 };
 
-export const User = mongoose.model('User', userSchema);
+userSchema.virtual('publicProfile').get(function () {
+  return {
+    id: this._id,
+    email: this.email,
+    name: this.name,
+  };
+});
+
+const User = mongoose.model('User', userSchema);
+
+export { User };
+export default User;
